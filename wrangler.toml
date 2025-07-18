@@ -1,0 +1,17 @@
+name = "esus-monitor"
+main = "worker.js"
+compatibility_date = "2024-07-15"
+
+# Configuração do KV
+[[kv_namespaces]]
+binding = "ESUS_MONITOR_KV"
+id = "SUBSTITUA_PELO_SEU_KV_NAMESPACE_ID"
+
+# Cron trigger para execução diária às 9h UTC (6h Brasília)
+[triggers]
+crons = ["0 9 * * *"]
+
+# Variáveis de ambiente
+[vars]
+FROM_EMAIL = "noreply@esus-monitor.workers.dev"
+FROM_NAME = "Monitor e-SUS APS"

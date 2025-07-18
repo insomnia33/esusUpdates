@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor de Atualizações e-SUS APS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Monitor de Atualizações e-SUS APS</h1>
+            <p class="subtitle">Receba notificações automáticas sobre atualizações do e-SUS APS e API LEDI</p>
+        </header>
+
+        <section class="monitored-links">
+            <h2>Links Monitorados</h2>
+            <div class="links-grid">
+                <div class="link-card">
+                    <h3>Blog e-SUS APS</h3>
+                    <p>Notícias e atualizações oficiais</p>
+                    <a href="https://sisaps.saude.gov.br/sistemas/esusaps/blog/" target="_blank" rel="noopener">
+                        Visitar Blog
+                    </a>
+                </div>
+                <div class="link-card">
+                    <h3>API LEDI</h3>
+                    <p>Documentação e versões da API</p>
+                    <a href="https://integracao.esusab.ufsc.br/ledi/index.html" target="_blank" rel="noopener">
+                        Visitar Documentação
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="subscription">
+            <h2>Inscrever-se para Notificações</h2>
+            <form id="subscriptionForm" class="subscription-form">
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="seu@email.com" 
+                        required
+                        autocomplete="email"
+                    >
+                </div>
+                <button type="submit" id="submitBtn" class="submit-btn">
+                    <span class="btn-text">Inscrever-se</span>
+                    <span class="btn-loading" style="display: none;">Processando...</span>
+                </button>
+            </form>
+            
+            <div id="feedback" class="feedback" style="display: none;">
+                <div id="feedbackMessage" class="feedback-message"></div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>Serviço não oficial de monitoramento. Dados obtidos dos sites oficiais do Ministério da Saúde.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
