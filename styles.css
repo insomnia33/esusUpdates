@@ -1,0 +1,346 @@
+/* Design System */
+:root {
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --success-color: #16a34a;
+  --error-color: #dc2626;
+  --warning-color: #d97706;
+  --text-color: #1f2937;
+  --text-light: #6b7280;
+  --bg-color: #ffffff;
+  --bg-light: #f9fafb;
+  --border-color: #e5e7eb;
+  --border-focus: #3b82f6;
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --radius: 8px;
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-light);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Monitored Links Section */
+.monitored-links {
+  margin-bottom: 3rem;
+}
+
+.monitored-links h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.link-card {
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.link-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.link-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.link-card p {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.link-card a {
+  display: inline-block;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: var(--radius);
+  transition: all 0.2s ease;
+}
+
+.link-card a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Subscription Section */
+.subscription {
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.subscription h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.subscription-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-group input:invalid {
+  border-color: var(--error-color);
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.875rem 1.5rem;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  position: relative;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: var(--primary-hover);
+}
+
+.submit-btn:active {
+  transform: translateY(1px);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-loading {
+  display: none;
+}
+
+.submit-btn.loading .btn-text {
+  display: none;
+}
+
+.submit-btn.loading .btn-loading {
+  display: inline;
+}
+
+/* Feedback */
+.feedback {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: var(--radius);
+  text-align: center;
+  font-weight: 500;
+}
+
+.feedback.success {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: var(--success-color);
+}
+
+.feedback.error {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: var(--error-color);
+}
+
+.feedback.warning {
+  background-color: #fffbeb;
+  border: 1px solid #fed7aa;
+  color: var(--warning-color);
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  text-align: center;
+  padding-top: 2rem;
+  color: var(--text-light);
+  font-size: 0.875rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 0.75rem;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .links-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .link-card {
+    padding: 1.25rem;
+  }
+  
+  .subscription {
+    padding: 1.5rem;
+  }
+  
+  .subscription h2 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .link-card {
+    padding: 1rem;
+  }
+  
+  .subscription {
+    padding: 1rem;
+  }
+}
+
+/* Focus and Accessibility */
+button:focus,
+input:focus,
+a:focus {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feedback {
+  animation: fadeIn 0.3s ease;
+}
+
+/* Loading state */
+.submit-btn.loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin: auto;
+  border: 2px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@keyframes spin {
+  0% { transform: translateY(-50%) rotate(0deg); }
+  100% { transform: translateY(-50%) rotate(360deg); }
+}

@@ -1,0 +1,14 @@
+name = "esus-monitor"
+main = "src/worker.js"
+compatibility_date = "2024-01-01"
+
+[env.production]
+kv_namespaces = [
+  { binding = "ESUS_MONITOR_KV", preview_id = "your-preview-kv-namespace-id", id = "your-production-kv-namespace-id" }
+]
+
+[triggers]
+crons = ["0 9 * * *"]  # Executa diariamente às 9h UTC
+
+[[env.production.vars]]
+ENVIRONMENT = "production"
