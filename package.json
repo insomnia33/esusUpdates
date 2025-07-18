@@ -1,0 +1,14 @@
+{
+  "name": "esus-monitor",
+  "version": "1.0.0",
+  "description": "Monitor de Atualizações do e-SUS APS",
+  "main": "worker.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "node test-system.js"
+  },
+  "keywords": ["esus", "cloudflare-workers", "monitoring"],
+  "author": "Seu Nome",
+  "license": "MIT"
+}

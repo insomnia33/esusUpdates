@@ -1,0 +1,95 @@
+{
+  "timestamp": "2025-07-18T22:50:48.992Z",
+  "tests": [
+    {
+      "name": "Frontend Access",
+      "status": "failed",
+      "startTime": 1752879049009,
+      "endTime": 1752879049164,
+      "duration": 155,
+      "error": {
+        "message": "fetch failed",
+        "stack": "TypeError: fetch failed\n    at node:internal/deps/undici/undici:13178:13\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SystemTester.makeRequest (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:41:24)\n    at async SystemTester.testFrontendAccess (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:99:22)\n    at async SystemTester.runTest (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:72:23)\n    at async SystemTester.runAllTests (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:328:7)\n    at async main (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:395:5)"
+      },
+      "details": {}
+    },
+    {
+      "name": "Static Files",
+      "status": "failed",
+      "startTime": 1752879049165,
+      "endTime": 1752879049171,
+      "duration": 6,
+      "error": {
+        "message": "fetch failed",
+        "stack": "TypeError: fetch failed\n    at node:internal/deps/undici/undici:13178:13\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SystemTester.makeRequest (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:41:24)\n    at async SystemTester.testStaticFiles (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:129:24)\n    at async SystemTester.runTest (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:72:23)\n    at async SystemTester.runAllTests (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:328:7)\n    at async main (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:395:5)"
+      },
+      "details": {}
+    },
+    {
+      "name": "Health Endpoint",
+      "status": "failed",
+      "startTime": 1752879049171,
+      "endTime": 1752879049176,
+      "duration": 5,
+      "error": {
+        "message": "fetch failed",
+        "stack": "TypeError: fetch failed\n    at node:internal/deps/undici/undici:13178:13\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SystemTester.makeRequest (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:41:24)\n    at async SystemTester.testHealthEndpoint (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:158:22)\n    at async SystemTester.runTest (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:72:23)\n    at async SystemTester.runAllTests (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:328:7)\n    at async main (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:395:5)"
+      },
+      "details": {}
+    },
+    {
+      "name": "Email Subscription",
+      "status": "failed",
+      "startTime": 1752879049176,
+      "endTime": 1752879049186,
+      "duration": 10,
+      "error": {
+        "message": "fetch failed",
+        "stack": "TypeError: fetch failed\n    at node:internal/deps/undici/undici:13178:13\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SystemTester.makeRequest (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:41:24)\n    at async SystemTester.testEmailSubscription (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:183:22)\n    at async SystemTester.runTest (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:72:23)\n    at async SystemTester.runAllTests (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:328:7)\n    at async main (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:395:5)"
+      },
+      "details": {}
+    },
+    {
+      "name": "Invalid Email Validation",
+      "status": "failed",
+      "startTime": 1752879049186,
+      "endTime": 1752879049190,
+      "duration": 4,
+      "error": {
+        "message": "fetch failed",
+        "stack": "TypeError: fetch failed\n    at node:internal/deps/undici/undici:13178:13\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SystemTester.makeRequest (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:41:24)\n    at async SystemTester.testInvalidEmailValidation (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:215:24)\n    at async SystemTester.runTest (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:72:23)\n    at async SystemTester.runAllTests (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:328:7)\n    at async main (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:395:5)"
+      },
+      "details": {}
+    },
+    {
+      "name": "Responsiveness",
+      "status": "failed",
+      "startTime": 1752879049190,
+      "endTime": 1752879049195,
+      "duration": 5,
+      "error": {
+        "message": "fetch failed",
+        "stack": "TypeError: fetch failed\n    at node:internal/deps/undici/undici:13178:13\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SystemTester.makeRequest (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:41:24)\n    at async SystemTester.testResponsiveness (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:248:24)\n    at async SystemTester.runTest (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:72:23)\n    at async SystemTester.runAllTests (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:328:7)\n    at async main (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:395:5)"
+      },
+      "details": {}
+    },
+    {
+      "name": "Basic Performance",
+      "status": "failed",
+      "startTime": 1752879049196,
+      "endTime": 1752879049199,
+      "duration": 3,
+      "error": {
+        "message": "fetch failed",
+        "stack": "TypeError: fetch failed\n    at node:internal/deps/undici/undici:13178:13\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SystemTester.makeRequest (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:41:24)\n    at async SystemTester.testBasicPerformance (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:283:24)\n    at async SystemTester.runTest (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:72:23)\n    at async SystemTester.runAllTests (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:328:7)\n    at async main (C:\\Users\\pcesa\\OneDrive\\Documentos\\esusUpdates\\test-system.js:395:5)"
+      },
+      "details": {}
+    }
+  ],
+  "summary": {
+    "total": 7,
+    "passed": 0,
+    "failed": 7,
+    "skipped": 0
+  }
+}

@@ -1,14 +1,17 @@
 name = "esus-monitor"
-main = "src/worker.js"
-compatibility_date = "2024-01-01"
+main = "worker.js"
+compatibility_date = "2024-07-15"
 
-[env.production]
-kv_namespaces = [
-  { binding = "ESUS_MONITOR_KV", preview_id = "your-preview-kv-namespace-id", id = "your-production-kv-namespace-id" }
-]
+# Configuração do KV
+[[kv_namespaces]]
+binding = "ESUS_MONITOR_KV"
+id = "SUBSTITUA_PELO_SEU_KV_NAMESPACE_ID"
 
+# Cron trigger para execução diária às 9h UTC (6h Brasília)
 [triggers]
-crons = ["0 9 * * *"]  # Executa diariamente às 9h UTC
+crons = ["0 9 * * *"]
 
-[[env.production.vars]]
-ENVIRONMENT = "production"
+# Variáveis de ambiente
+[vars]
+FROM_EMAIL = "noreply@esus-monitor.workers.dev"
+FROM_NAME = "Monitor e-SUS APS"
